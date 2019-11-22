@@ -3,9 +3,9 @@
     <keep-alive>
       <router-view v-if="$route.meta.cache"/>
     </keep-alive>
-    <KeepAliveChain>
+    <VKeepAliveChain>
       <router-view v-if="!$route.meta.cache"/>
-    </KeepAliveChain>
+    </VKeepAliveChain>
   </div>
 </template>
 

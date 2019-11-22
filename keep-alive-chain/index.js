@@ -54,7 +54,7 @@ export const mergeBeforeEachHook = (hook = defaultHook) => {
   }
 }
 
-export const KeepAliveChain = {
+export const VKeepAliveChain = {
   install (Vue, options = { key: 'cacheTo' }) {
     const { key } = options
 
@@ -63,7 +63,7 @@ export const KeepAliveChain = {
     }
 
     const component = {
-      name: 'KeepAliveChain',
+      name: 'VKeepAliveChain',
       functional: true,
       render (h, { children }) {
         return h(
@@ -74,6 +74,6 @@ export const KeepAliveChain = {
       }
     }
 
-    Vue.component('KeepAliveChain', component)
+    Vue.component('VKeepAliveChain', component)
   }
 }

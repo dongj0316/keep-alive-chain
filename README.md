@@ -1,4 +1,4 @@
-# keep-alive-chain
+# v-keep-alive-chain
 vue缓存链控制，Vue前进刷新，后退不刷新（Forward refresh, back not refresh）
 
 [online demo](https://dongj0316.github.io/keep-alive-chain/demo/)
@@ -8,14 +8,14 @@ vue缓存链控制，Vue前进刷新，后退不刷新（Forward refresh, back n
 ## Use
 
 ```bash
-$ npm install keep-alive-chain
+$ npm install v-keep-alive-chain
 ```
 
 ```js
 // main.js
-import { mergeBeforeEachHook, KeepAliveChain } from 'keep-alive-chain'
+import { mergeBeforeEachHook, VKeepAliveChain } from 'v-keep-alive-chain'
 
-Vue.use(KeepAliveChain, {
+Vue.use(VKeepAliveChain, {
   key: 'cacheTo' // 可选的 默认为cacheTo
 })
 
@@ -34,9 +34,9 @@ router.beforeEach(mergeBeforeEachHook((to, from, next) => {
 <keep-alive>
   <router-view v-if="$route.meta.keepAlive"/>
 </keep-alive>
-<KeepAliveChain>
+<VKeepAliveChain>
   <router-view v-if="!$route.meta.keepAlive"/>
-</KeepAliveChain>
+</VKeepAliveChain>
 ```
 
 接着在router中配置你的需求

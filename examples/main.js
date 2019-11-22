@@ -2,9 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { mergeBeforeEachHook, KeepAliveChain } from '../keep-alive-chain'
+import { mergeBeforeEachHook, VKeepAliveChain } from 'v-keep-alive-chain'
 
-Vue.use(KeepAliveChain)
+Vue.use(VKeepAliveChain)
 
 router.beforeEach(mergeBeforeEachHook())
 
