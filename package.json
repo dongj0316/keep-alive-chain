@@ -1,11 +1,15 @@
 {
-  "name": "test2",
+  "name": "keep-alive-chain",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Vue前进刷新，后退不刷新（Forward refresh, back not refresh）",
+  "author": "dongj0316",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "npm run build-lib && npm run build-demo",
+    "lint": "vue-cli-service lint",
+    "build-demo": "vue-cli-service build --dest demo",
+    "build-lib": "vue-cli-service build --target lib --name keep-alive-chain --dest dist keep-alive-chain/index.js"
   },
   "dependencies": {
     "core-js": "^3.3.2",
@@ -25,5 +29,19 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
+  },
+  "keyword": [
+    "vue",
+    "Forward refresh, back not refresh",
+    "前进刷新，后退不刷新",
+    "keep-alive",
+    "keep-alive-chain",
+    "vue缓存链"
+  ],
+  "license": "MIT",
+  "main": "dist/keep-alive-chain.umd.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongj0316/keep-alive-chain"
   }
 }
